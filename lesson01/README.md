@@ -26,13 +26,13 @@ In this Lesson the wizeliner will learn about the principal commands of terrafor
                 }
 
                 resource "aws_instance" "miServidor" {
-                    ami = "ami-08c40ec9ead489470"
-                    instance_type = "t2.micro"
+                    ami = var.ubuntu_ami
+                    instance_type = var.instance_type
                     vpc_security_group_ids = [ aws_security_group.mi_grupo_de_seguridad.id ]
                     user_data = <<-EOF
                                 #!/bin/bash
                                 echo "Hola Terraformers!" > index.html
-                                nohup busybox httpd -f -p 8080 & 
+                                nohup busybox httpd -f -p ${var.server_port} & 
                                 EOF
                 }
 
@@ -42,8 +42,8 @@ In this Lesson the wizeliner will learn about the principal commands of terrafor
                     ingress {
                         cidr_blocks = ["0.0.0.0/0"]
                         description = "Acceso al puerto web"
-                        from_port = 8080
-                        to_port = 8080
+                        from_port = var.server_port
+                        to_port = var.server_port
                         protocol = "TCP"
                     }
             }
