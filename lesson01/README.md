@@ -15,7 +15,6 @@ In this Lesson the wizeliner will learn about the principal commands of terrafor
 - My first deploy in AWS
     <details>
         <summary>Solution</summary>
-        <table>
             <tr>
                 <td><strong>main.tf</strong></td>
             </tr>
@@ -46,6 +45,5 @@ In this Lesson the wizeliner will learn about the principal commands of terrafor
                                 to_port = var.server_port
                                 protocol = "TCP"
                             }
-                        }
-        </table>                
+                        }               
     </details>
