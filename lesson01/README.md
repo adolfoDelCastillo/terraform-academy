@@ -13,3 +13,7 @@ In this Lesson the wizeliner will learn about the principal commands of terrafor
     * terraform local variables
     * terraform outputs
 - My first deploy in AWS
+    <details>
+        <summary>Solution</summary>
+        <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+    </details>
