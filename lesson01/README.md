@@ -20,7 +20,8 @@ In this Lesson the wizeliner will learn about the principal commands of terrafor
             <td><strong>main.tf</strong></td>
         </tr>
         <tr>
-            <td>                provider "aws" {
+            <td>
+                provider "aws" {
                     region = "us-east-1"
                 }
 
@@ -45,7 +46,5 @@ In this Lesson the wizeliner will learn about the principal commands of terrafor
                         to_port = var.server_port
                         protocol = "TCP"
                     }
-                }</td>
-        </tr>
-        </table>               
+                }          
     </details>
