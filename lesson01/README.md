@@ -25,7 +25,7 @@ In this Lesson the wizeliner will learn about the principal commands of terrafor
                     region = "us-east-1"
                 }
 
-                <br>resource "aws_instance" "miServidor" {</br>
+                resource "aws_instance" "miServidor" {
                     ami = "ami-08c40ec9ead489470"
                     instance_type = "t2.micro"
                     vpc_security_group_ids = [ aws_security_group.mi_grupo_de_seguridad.id ]
