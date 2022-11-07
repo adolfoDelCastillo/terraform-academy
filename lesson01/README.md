@@ -47,7 +47,4 @@ In this Lesson the wizeliner will learn about the principal commands of terrafor
                                 protocol = "TCP"
                             }
                         }
-                </td>
-            </tr>
-        </table>
     </details>
