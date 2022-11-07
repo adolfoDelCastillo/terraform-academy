@@ -12,3 +12,4 @@ In this Lesson the wizeliner will learn about the principal commands of terrafor
     * terraform variables
     * terraform local variables
     * terraform outputs
+- My first deploy in AWS
