@@ -5,13 +5,12 @@ In this Lesson the wizeliner will learn about the principal commands of terrafor
 
 - Providers
 - Resources 
+- Variables
+- Output
 - Principal commands:
     * terraform plan
     * terraform apply
     * terraform destroy
-    * terraform variables
-    * terraform local variables
-    * terraform outputs
 - My first deploy in AWS
     <details>
         <summary>Solution</summary>
@@ -25,23 +24,23 @@ In this Lesson the wizeliner will learn about the principal commands of terrafor
                     region = "us-east-1"
                 }
 
-                resource "aws_instance" "miServidor" {
+                resource "aws_instance" "myServer" {
                     ami = var.ubuntu_ami
                     instance_type = var.instance_type
-                    vpc_security_group_ids = [ aws_security_group.mi_grupo_de_seguridad.id ]
+                    vpc_security_group_ids = [ aws_security_group.my_security_group.id ]
                     user_data = <<-EOF
                                 #!/bin/bash
-                                echo "Hola Terraformers!" > index.html
+                                echo "Hi wizeliners!" > index.html
                                 nohup busybox httpd -f -p ${var.server_port} & 
                                 EOF
                 }
 
-                resource "aws_security_group" "mi_grupo_de_seguridad" {
-                    name = "primer-servidor-sg"
+                resource "aws_security_group" "my_security_group" {
+                    name = "first-server-sg"
 
                     ingress {
                         cidr_blocks = ["0.0.0.0/0"]
-                        description = "Acceso al puerto web"
+                        description = "Web port"
                         from_port = var.server_port
                         to_port = var.server_port
                         protocol = "TCP"
