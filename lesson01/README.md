@@ -8,6 +8,7 @@ In this Lesson the wizeliner will learn about the principal commands of terrafor
 - Variables
 - Output
 - Principal commands:
+    * terraform validate
     * terraform plan
     * terraform apply
     * terraform destroy
